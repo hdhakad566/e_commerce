@@ -21,10 +21,14 @@ const User = sequelize.define('User', {
     allowNull: false,
   },
   mob: {
-          type: DataTypes.BIGINT,  // Use BIGINT for mobile numbers
-          allowNull: false,
-          unique: true,  // Optional, if you want to enforce uniqueness of the mobile number
-        }
+    type: DataTypes.BIGINT, // Use BIGINT for mobile numbers
+    allowNull: false,
+    unique: true,
+  },
+  password: {  // Add the password field here
+    type: DataTypes.STRING,
+    allowNull: false,
+  }
 }, {
   tableName: 'users',
   timestamps: false,
